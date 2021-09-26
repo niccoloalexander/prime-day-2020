@@ -1,0 +1,97 @@
+body {
+    /* background-color: #44AAF5 */
+}
+
+.banner {
+    padding-top: 2%;
+    /* font-style: italic; */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.pic {
+  border-radius: 50px 0 50px 0;
+}
+  
+.menu {
+    height: 112px;
+    width: 912px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 24px;
+    margin: 0 auto 0 auto;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
+}
+
+.menu-small {
+    height: 112px;
+    width: 456px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 24px;
+    margin: 0 auto 0 auto;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
+}
+
+.menu-title {
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #0095D7;
+}
+
+  .customer-menu {
+    margin-left: auto;
+    margin-right: auto;
+    width: 67%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .app-page {
+    height: fit-content;
+  }
+  
+  .home {
+    padding: 5%;
+  }
+  
+  .home a:link {
+    color:gray;
+  }
+  
+  .home a:visited {
+    color: black;
+  }
+  
+  .bigcard {
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    margin-top: 1.25%;
+    margin-bottom: 1.25%;
+}
+
+  .card {
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    margin-top: 1.25%;
+    margin-bottom: 1.25%;
+    right: 2.5%;
+}
+
+.card-lpad {
+    /* margin-bottom: 24px; */
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    left: 2.5%;
+    right: 2.5%;
+    margin-top: 1.25%;
+    margin-bottom: 1.25%;
+}
+
+.section {
+    margin-top: 12px;
+    margin-left: -48px;
+}
