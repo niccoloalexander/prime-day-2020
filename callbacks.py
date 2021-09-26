@@ -367,6 +367,8 @@ def update_ad_stats(marketplace, stype):
             number = {'prefix': '$'},
             delta = {'position': 'top', 
                     'reference': filtered_data[filtered_data['Period'] == 'Non-Prime Day'][var].values[0],
+                    'decreasing': {'color': '#3D9970'},
+                    'increasing': {'color': '#FF4136'},
                     },
             domain = {'x': [0, 1], 'y': [0, 1]},
             title= 'Prime Day',

@@ -95,18 +95,18 @@ marketLayout = html.Div(
         dbc.Row(dbc.Col(html.H3(children="Sales Stats")), className= 'section'),
         dbc.Row(
             dbc.Col(
-                dcc.Graph(id="med-sales-dt-chart", config={"displayModeBar": True}), className= 'bigcard',
+                dcc.Graph(id="med-sales-dt-chart", config={"displayModeBar": False}), className= 'bigcard',
             ),
         ),
         dbc.Row(
             dbc.Col(
-                dcc.Graph(id="sales-chart", config={"displayModeBar": True}), className= 'bigcard',
+                dcc.Graph(id="sales-chart", config={"displayModeBar": False}), className= 'bigcard',
             ),
         ),
         dbc.Row(
             [
                 dbc.Col(
-                    dcc.Graph(id="orders-chart", config={"displayModeBar": True}),
+                    dcc.Graph(id="orders-chart", config={"displayModeBar": False}),
                     xs={"size": 12, "offset": 0},
                     sm={"size": 12, "offset": 0},
                     md={"size": 12, "offset": 0},
@@ -114,7 +114,7 @@ marketLayout = html.Div(
                     className= 'card',
                 ),
                 dbc.Col(
-                    dcc.Graph(id="quantity-chart", config={"displayModeBar": True}),
+                    dcc.Graph(id="quantity-chart", config={"displayModeBar": False}),
                     xs={"size": 12, "offset": 0},
                     sm={"size": 12, "offset": 0},
                     md={"size": 12, "offset": 0},
@@ -152,7 +152,7 @@ marketLayout = html.Div(
         dbc.Row(
             [
                 dbc.Col(
-                    dcc.Graph(id="ctr-chart", config={"displayModeBar": True}),
+                    dcc.Graph(id="ctr-chart", config={"displayModeBar": False}),
                     xs={"size": 12, "offset": 0},
                     sm={"size": 12, "offset": 0},
                     md={"size": 12, "offset": 0},
@@ -160,7 +160,7 @@ marketLayout = html.Div(
                     className= 'card',
                 ),
                 dbc.Col(
-                    dcc.Graph(id="cpc-chart", config={"displayModeBar": True}),
+                    dcc.Graph(id="cpc-chart", config={"displayModeBar": False}),
                     xs={"size": 12, "offset": 0},
                     sm={"size": 12, "offset": 0},
                     md={"size": 12, "offset": 0},
@@ -173,7 +173,7 @@ marketLayout = html.Div(
         dbc.Row(
             [
                 dbc.Col(
-                    dcc.Graph(id="roas-chart", config={"displayModeBar": True}),
+                    dcc.Graph(id="roas-chart", config={"displayModeBar": False}),
                     xs={"size": 12, "offset": 0},
                     sm={"size": 12, "offset": 0},
                     md={"size": 12, "offset": 0},
@@ -181,7 +181,7 @@ marketLayout = html.Div(
                     className= 'card',
                 ),
                 dbc.Col(
-                    dcc.Graph(id="acos-chart", config={"displayModeBar": True}),
+                    dcc.Graph(id="acos-chart", config={"displayModeBar": False}),
                     xs={"size": 12, "offset": 0},
                     sm={"size": 12, "offset": 0},
                     md={"size": 12, "offset": 0},
@@ -194,7 +194,7 @@ marketLayout = html.Div(
         dbc.Row(
             [
                 dbc.Col(
-                    dcc.Graph(id="ad-revenue-chart", config={"displayModeBar": True}),
+                    dcc.Graph(id="ad-revenue-chart", config={"displayModeBar": False}),
                     xs={"size": 12, "offset": 0},
                     sm={"size": 12, "offset": 0},
                     md={"size": 12, "offset": 0},
@@ -202,7 +202,7 @@ marketLayout = html.Div(
                     className= 'card',
                 ),
                 dbc.Col(
-                    dcc.Graph(id="ad-spending-chart", config={"displayModeBar": True}),
+                    dcc.Graph(id="ad-spending-chart", config={"displayModeBar": False}),
                     xs={"size": 12, "offset": 0},
                     sm={"size": 12, "offset": 0},
                     md={"size": 12, "offset": 0},
@@ -224,7 +224,7 @@ customerLayout = html.Div(
         dbc.Row(
             [
                 dbc.Col(
-                    dcc.Graph(id="sales-dt-cust-chart", config={"displayModeBar": True}),
+                    dcc.Graph(id="sales-dt-cust-chart", config={"displayModeBar": False}),
                     xs={"size": 12, "offset": 0},
                     sm={"size": 12, "offset": 0},
                     md={"size": 12, "offset": 0},
@@ -262,7 +262,7 @@ customerLayout = html.Div(
         dbc.Row(
             [
                 dbc.Col(
-                    dcc.Graph(id="ad-dt-cust-chart", config={"displayModeBar": True}),
+                    dcc.Graph(id="ad-dt-cust-chart", config={"displayModeBar": False}),
                     xs={"size": 12, "offset": 0},
                     sm={"size": 12, "offset": 0},
                     md={"size": 12, "offset": 0},
