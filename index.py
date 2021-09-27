@@ -76,6 +76,9 @@ def display_page(pathname):
             * What was the impact of Prime Day on Sales? 
             * Is advertising efficient during the event? 
             * What type of advertising worked best? 
+
+            ### To Begin:
+            Use the navigation bar at the top to open the market summary or customer insights dashboards.
         """
                 )
             ],
