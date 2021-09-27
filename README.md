@@ -8,7 +8,7 @@ It was built using Plotly Dash, Dash Bootsrap Components, Pandas, and SQLite. Al
 "*Amazon Prime Day is an annual deal event exclusively for Prime members, delivering two days of epic deals on products on all kind of businesses and brands."*
 
 * What was the impact of Prime Day on Sales? 
-* Is advertising efficient during the event? 
+* Was advertising efficient during the event? 
 * What type of advertising worked best? 
 
 ### Credit 
