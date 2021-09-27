@@ -627,6 +627,7 @@ def update_cust_stats(marketplace, customer, stype, var, var1, var2):
     chart1.update_layout(
         hovermode= 'x',
         yaxis_tickprefix = '{}'.format('$' if var in dollar_cols else ''),
+        yaxis_ticksuffix = '{}'.format('%' if var in pct_cols else ''),
 #         yaxis_tickformat = '.2f',
         shapes=[
             dict(
@@ -677,23 +678,21 @@ def update_cust_stats(marketplace, customer, stype, var, var1, var2):
         )
         
     chart2.update_yaxes(rangemode= 'tozero',
-#                                ticksuffix= '%'
-                              )
+    )
         
     chart2.update_layout(
         template= 'none',
         hovermode= 'x',
-        yaxis_tickprefix = '{}'.format('$' if var in dollar_cols else ''),
-        yaxis_ticksuffix = '{}'.format('%' if var in pct_cols else ''),
-#         yaxis_tickformat = '.2f',
-        yaxis2= dict(
-            tickprefix= '{}'.format('$' if var in dollar_cols else ''),
-            ticksuffix= '{}'.format('%' if var in pct_cols else ''),
-            title= '{}'.format(var2)
-        ),
+        yaxis_tickprefix = '{}'.format('$' if var1 in dollar_cols else ''),
+        yaxis_ticksuffix = '{}'.format('%' if var1 in pct_cols else ''),
         title= '{} and {}'.format(var1, var2),
         xaxis_title= 'Date',
         yaxis_title= '{}'.format(var1),
+        yaxis2= dict(
+            tickprefix= '{}'.format('$' if var2 in dollar_cols else ''),
+            ticksuffix= '{}'.format('%' if var2 in pct_cols else ''),
+            title= '{}'.format(var2)
+        ),
         legend= dict(
             title= 'Variable, Sponsored Type'
         ),
