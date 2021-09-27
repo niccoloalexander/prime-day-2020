@@ -68,7 +68,7 @@ def display_page(pathname):
                     """
             ### The App
             This app was built by Niccolo Alexander Hamlin to explore how Amazon Prime Day affects customer sales and advertisting as detailed in the prompt below. 
-            It was built using Plotly Dash, Dash Bootsrap Components, Pandas, and SQLite. All figures are generated with mock data.
+            It was built using Plotly Dash, Dash Bootstrap Components, Pandas, and SQLite. All figures are generated with mock data.
 
             ### The Prompt
             "*Amazon Prime Day is an annual deal event exclusively for Prime members, delivering two days of epic deals on products on all kind of businesses and brands."*
