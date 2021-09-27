@@ -36,6 +36,17 @@ body {
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
 }
 
+.menu-large {
+  height: 112px;
+  width: 1080;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 24px;
+  margin: 0 auto 0 auto;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.18);
+}
+
 .menu-title {
     margin-bottom: 6px;
     font-weight: bold;

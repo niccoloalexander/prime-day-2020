@@ -581,9 +581,12 @@ def update_ad_stats(marketplace, stype):
         Input("marketplace-dropdown-2", "value"),
         Input("customer-dropdown", "value"),
         Input("sponsored-type-dropdown-2", "value"),
+        Input("sales-var-dropdown", "value"),
+        Input("ad-var-a-dropdown", "value"),
+        Input("ad-var-b-dropdown", "value"),
     ],
 )
-def update_cust_stats(marketplace, customer, stype):
+def update_cust_stats(marketplace, customer, stype, var, var1, var2):
 
     mask = (
         (sales_customer_aggs['Marketplace'] == marketplace)
@@ -610,8 +613,8 @@ def update_cust_stats(marketplace, customer, stype):
             
     filtered_ad_data = ads_customer_aggs.loc[mask, :]
     
-    var = 'Sales'
-    dollar_cols = ['Sales', 'Average Price', 'Median Price']
+    dollar_cols = ['Sales', 'Average Price', 'Median Price', 'Ad Costs', 'Ad Revenue', 'CPC']
+    pct_cols = ['CTR', 'ACoS', 'ROAS']
 
     chart1 = px.line(
                         filtered_data, 
@@ -651,9 +654,6 @@ def update_cust_stats(marketplace, customer, stype):
             font= {'family': 'Franklin Gothic'},
     )
 
-    var1 = 'Ad Revenue'
-    var2 = 'ACoS'
-
     chart2 = make_subplots(specs=[[{'secondary_y': True}]])
 
     
@@ -683,16 +683,17 @@ def update_cust_stats(marketplace, customer, stype):
     chart2.update_layout(
         template= 'none',
         hovermode= 'x',
-        yaxis_tickprefix = '$',
+        yaxis_tickprefix = '{}'.format('$' if var in dollar_cols else ''),
+        yaxis_ticksuffix = '{}'.format('%' if var in pct_cols else ''),
 #         yaxis_tickformat = '.2f',
         yaxis2= dict(
-#             tickformat= '%',
-            ticksuffix= '%',
-            title= 'ACoS'
+            tickprefix= '{}'.format('$' if var in dollar_cols else ''),
+            ticksuffix= '{}'.format('%' if var in pct_cols else ''),
+            title= '{}'.format(var2)
         ),
-        title="Ad Revenue and ACoS",
-        xaxis_title="Date",
-        yaxis_title="Ad Revenue",
+        title= '{} and {}'.format(var1, var2),
+        xaxis_title= 'Date',
+        yaxis_title= '{}'.format(var1),
         legend= dict(
             title= 'Variable, Sponsored Type'
         ),

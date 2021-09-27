@@ -220,7 +220,27 @@ marketLayout = html.Div(
 
 customerLayout = html.Div(
     [
-        dbc.Row(dbc.Col(html.H3(children="Sales Stats")), className= 'section'),
+        dbc.Row(
+            dbc.Col(html.H3(children="Sales Stats")), className= 'section'
+        ),
+        html.Div(
+            [
+                dcc.Dropdown(
+                    style={
+                        "text-align": "center",
+                        "font-size": "18px",
+                        "width": "210px",
+                    },
+                    id= "sales-var-dropdown",
+                    options= [
+                            {"label": var, "value": var}
+                            for var in sales_customer_aggs.columns[3:]
+                    ],
+                    value= 'Sales',
+                    clearable= False,
+                ),
+            ],
+        ),
         dbc.Row(
             [
                 dbc.Col(
@@ -238,26 +258,64 @@ customerLayout = html.Div(
         html.Div(
             [
                 html.Div(
-                            [
-                                html.Div(children="Sponsored Type", className="menu-title"),
-                                dcc.Dropdown(
-                                    style={
-                                        "text-align": "center",
-                                        "font-size": "18px",
-                                        "width": "210px",
-                                    },
-                                    id= "sponsored-type-dropdown-2",
-                                    options= [
-                                            {"label": stype, "value": stype}
-                                            for stype in ads_customer_aggs['Sponsored Type'].unique()
-                                    ],
-                                    value= 'All',
-                                    clearable= True,
-                                ),
-                            ]
+                    [
+                        html.Div(children="Variable A", className="menu-title"),
+                        dcc.Dropdown(
+                            style={
+                                "text-align": "center",
+                                "font-size": "18px",
+                                "width": "210px",
+                            },
+                            id= "ad-var-a-dropdown",
+                            options= [
+                                    {"label": var, "value": var}
+                                    for var in ads_customer_aggs.columns[4:]
+                            ],
+                            value= 'Ad Revenue',
+                            clearable= False,
+                        ),
+                    ]
+                ),
+                html.Div(
+                    [
+                        html.Div(children="Sponsored Type", className="menu-title"),
+                        dcc.Dropdown(
+                            style={
+                                "text-align": "center",
+                                "font-size": "18px",
+                                "width": "210px",
+                            },
+                            id= "sponsored-type-dropdown-2",
+                            options= [
+                                    {"label": stype, "value": stype}
+                                    for stype in ads_customer_aggs['Sponsored Type'].unique()
+                            ],
+                            value= 'All',
+                            clearable= True,
+                        ),
+                    ]
+                ),
+                html.Div(
+                    [
+                        html.Div(children="Variable B", className="menu-title"),
+                        dcc.Dropdown(
+                            style={
+                                "text-align": "center",
+                                "font-size": "18px",
+                                "width": "210px",
+                            },
+                            id= "ad-var-b-dropdown",
+                            options= [
+                                    {"label": var, "value": var}
+                                    for var in ads_customer_aggs.columns[4:]
+                            ],
+                            value= 'ACoS',
+                            clearable= False,
+                        ),
+                    ]
                 ),
             ],
-            className="menu-small",
+            className="menu-large",
         ),
         dbc.Row(
             [
