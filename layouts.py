@@ -76,11 +76,6 @@ customerMenu = html.Div(
                         "width": "210px",
                     },
                     id= "customer-dropdown",
-                    options= [
-                            {"label": customer, "value": customer}
-                            for customer in [customer for customer in (sales_customer_aggs['Customer'].unique()) if customer in ads_customer_aggs['Customer'].unique()]
-                    ],
-                    value= [customer for customer in (sales_customer_aggs['Customer'].unique()) if customer in ads_customer_aggs['Customer'].unique()][5],
                     clearable= False,
                 ),
             ],

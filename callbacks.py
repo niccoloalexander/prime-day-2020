@@ -574,6 +574,22 @@ def update_ad_stats(marketplace, stype):
 
 @app.callback(
     [
+        Output("customer-dropdown", "options"),
+        Output("customer-dropdown", "value"),
+    ],
+    Input("marketplace-dropdown-2", "value"),
+)
+def set_customer_options(marketplace):
+    
+    customers = [customer for customer in (
+                    sales_customer_aggs[sales_customer_aggs['Marketplace'] == marketplace]['Customer'].unique()
+                    ) if customer in ads_customer_aggs['Customer'].unique()
+                ]
+
+    return [{"label": customer, "value": customer} for customer in customers], customers[4]
+
+@app.callback(
+    [
         Output("sales-dt-cust-chart", "figure"),
         Output("ad-dt-cust-chart", "figure"),
     ],
