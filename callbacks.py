@@ -583,7 +583,7 @@ def set_customer_options(marketplace):
     
     customers = [customer for customer in (
                     sales_customer_aggs[sales_customer_aggs['Marketplace'] == marketplace]['Customer'].unique()
-                    ) if customer in ads_customer_aggs['Customer'].unique()
+                    ) if customer in ads_customer_aggs[ads_customer_aggs['Marketplace'] == marketplace]['Customer'].unique()
                 ]
 
     return [{"label": customer, "value": customer} for customer in customers], customers[4]
