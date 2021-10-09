@@ -191,7 +191,7 @@ def update_sales_stats(marketplace):
 #     chart4 = px.line(
 #                         filtered_dt_data, 
 #                         x= 'Date', y= var, 
-#                         title= '''US Market {}'''.format(var), 
+#                         title= '''{} Market {}'''.format(marketplace, var), 
 #                         template= 'none',
 #                         markers= True,
 # #                         hover_data= {variable: '{}'.format(':$.2f' if variable in dollar_cols else ':.2f')},
@@ -234,7 +234,7 @@ def update_sales_stats(marketplace):
     chart5 = px.line(
                         filtered_dt_data, 
                         x= 'Date', y= var, 
-                        title= '''US Market {}'''.format(var), 
+                        title= '''{} Market {}'''.format(marketplace, var), 
                         template= 'none',
                         markers= True,
 #                         hover_data= {variable: '{}'.format(':$.2f' if variable in dollar_cols else ':.2f')},
